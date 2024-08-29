@@ -1,6 +1,6 @@
 //Componente header
 import NavBar from "./components/navbar/navBar"
-
+import ItemListCointainer from "./components/ItemListContainer/itemListContainer"
 function App() {
   return (
   
@@ -10,7 +10,7 @@ function App() {
   
     </header>
     <main>
-
+    <ItemListCointainer nombre='HOLA GYMRATS'/>
     </main>
     </>
    

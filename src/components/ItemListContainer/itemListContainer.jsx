@@ -1,9 +1,10 @@
 
 
-const ItemListCointainer = () =>{
+const ItemListCointainer = ({nombre}) =>{
     return(
         <>
-        <h1>Bienvenidos</h1>
+            <h1>{nombre}</h1>
+        
         </>
     )
 }
