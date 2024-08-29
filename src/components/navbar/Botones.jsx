@@ -1,11 +1,10 @@
-const Botones = ({botones})=>{
 
 
+const Botones = ({nombre})=>{
     return(
         <>
-           <button className="botones">{botones}</button>
+        <button>{nombre}</button>
         </>
     )
 }
-//onClick  e tiene que ser una funcion con referencia a algo
 export default Botones
