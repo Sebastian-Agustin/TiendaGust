@@ -9,7 +9,7 @@ const NavBar = ()=> {
       <>
      
         <div className="contenedorDescuento" style={{display:"flex", justifyContent:"center", backgroundColor:"#facc15", color:"whitesmoke"}}>
-        <p>Ahorra YA! 20% de descuento en sumplementos. Y si es tu primera compra 50%</p>
+        <p>Ahorra YA! 20% de descuento en sumplementos.Si es tu primera compra! 50%</p>
       </div>
       <section className="seccionHeader" style={{display:"flex", justifyContent:"space-between", backgroundColor:"#10b981"}}>
         

@@ -10,8 +10,9 @@ function App() {
   
     </header>
     <main>
-    <ItemListCointainer nombre='HOLA GYMRATS'/>
+    <ItemListCointainer/>
     </main>
+    
     </>
    
   )
