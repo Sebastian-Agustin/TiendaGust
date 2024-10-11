@@ -1,21 +1,19 @@
 //Componente header
-import NavBar from "./components/navbar/navBar"
-import ItemListCointainer from "./components/ItemListContainer/itemListContainer"
+import Navbar from "./components/navbar/navBar"
+
+
+
+
 function App() {
   return (
-  
-    <>
-    <header>
-     <NavBar/>
-  
+ <>
+    <header style={{display:"flex",justifyContent:"center", backgroundColor:"red", padding:20, gap:"20px"}}>
+     <Navbar></Navbar>
     </header>
-    <main>
-    <ItemListCointainer/>
-    </main>
-    
-    </>
+ </>
+
    
   )
 }
-
 export default App
+

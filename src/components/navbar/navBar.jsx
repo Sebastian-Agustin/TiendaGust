@@ -1,35 +1,41 @@
-import Botones from "./Botones"
-import Carrito from "../CartWidget/carrito"
+import ItemListContainer from "../ItemListContainer/ItemListContainer"
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Link,
+  } from "react-router-dom"
+
+import Cartwidget from "./CartWidget/CartWidget"
 
 
-const NavBar = ()=> {
-
-
-    return(
+const Navbar = () => {
+ 
+return(
       <>
-     
-        <div className="contenedorDescuento" style={{display:"flex", justifyContent:"center", backgroundColor:"#facc15", color:"whitesmoke"}}>
-        <p>Ahorra YA! 20% de descuento en sumplementos.Si es tu primera compra! 50%</p>
-      </div>
-      <section className="seccionHeader" style={{display:"flex", justifyContent:"space-between", backgroundColor:"#10b981"}}>
-        
-       <div className="contenedorLogo"> 
-           <img src="#" alt="#" />
-       </div>
-     
+      <BrowserRouter>
        <nav>
-        <Botones nombre='Inicio'/>
-        <Botones nombre='Planificacion'/>
-        <Botones nombre='Contacto'/>
+         <ul style={
+            {display:"flex",justifyContent:"space-between", gap:"20px"}
+         }>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/celulares">Celulares</Link></li>
+            <li><Link to="/notebook">Notebook</Link></li>
+            <li><Link to="/tablet">Tablet</Link></li>
+         </ul>
+       </nav>
+       <Cartwidget></Cartwidget>
+       <Routes>
+         <Route path="/" element={<ItemListContainer/>}></Route>
+         <Route path="/notebook" element={<ItemListContainer/>}></Route>
+         <Route path="celulares" element={<ItemListContainer/>}></Route>
+         <Route path="/tablet" element={<ItemListContainer/>}></Route>
+       </Routes>
+     
 
-      </nav>
-      <div className="modalCarrito">
-      <Carrito/>
-      </div>
-       </section>
-   </> 
-   )
-   }
-      
-
-    export default NavBar
+      </BrowserRouter>
+      </>
+) 
+  
+}
+export default Navbar 

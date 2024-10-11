@@ -1,33 +1,17 @@
+import { getProducts } from "../../firebase/db"
 import { useState, useEffect } from "react"
-import { data } from "../../Data/data"
-import ItemList from "./itemList"
 
-
-const ItemListCointainer = () =>{
-    const  [items, setProduct]= useState([])
-
-    const getData = ()=>{
-        return new Promise((res, rej)=>{
-          setTimeout(()=>{
-                res(data)
-            }, 2000)
-        })
-    }
-
-    useEffect(()=>{
-      getData()
-       .then(resp => setProduct(resp))   
-    }, [])
+const ItemListContainer = () =>{
+     const [itemList ,setItemList]= useState([])
     
+     useEffect(()=>{
+        getProducts(setItemList)
+     },[])
     
-    return(
-         <>
-         <section className="sectionContainer">
-            <ItemList items={items} />        
-      
-      
-        </section>
-         </>
+    return (
+        <>
+        <h1>{itemList.map(res => res.name)}</h1>
+        </>
     )
 }
-export default ItemListCointainer
+export default ItemListContainer
